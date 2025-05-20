@@ -236,42 +236,47 @@ a {
 }
 
 /* ================================
-   Brand Logos Section
+   Brand Logos Section (Updated)
    ================================ */
 .brands-section {
   padding: 5rem 0;
   background: #121212;
-  overflow: hidden;
   text-align: center;
+  overflow: hidden;
 }
 
 .brand-logos {
+  width: 100%;
   overflow: hidden;
   position: relative;
-  width: 100%;
 }
 
 .logo-track {
   display: flex;
+  width: fit-content;
+  animation: scrollLoop 40s linear infinite;
+}
+
+.logo-set {
+  display: flex;
   gap: 3rem;
-  animation: scrollLogos 25s linear infinite;
   align-items: center;
 }
 
-.logo-track img {
+.logo-set img {
   height: 40px;
   filter: grayscale(100%);
   opacity: 0.7;
   transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
 }
 
-.logo-track img:hover {
+.logo-set img:hover {
   transform: scale(1.05);
   opacity: 1;
   filter: grayscale(0%);
 }
 
-@keyframes scrollLogos {
+@keyframes scrollLoop {
   0% {
     transform: translateX(0%);
   }
@@ -353,12 +358,7 @@ a {
     gap: 1rem;
   }
 
-  .logo-track {
-    gap: 2rem;
-    animation-duration: 35s;
-  }
-
-  .logo-track img {
+  .logo-set img {
     height: 30px;
   }
 }
