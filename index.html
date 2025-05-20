@@ -1,289 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John Ondwari Obiko | Award-Winning Designer</title>
-    <meta name="description" content="Branding & Web Designer from Nairobi creating immersive digital experiences">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Satoshi:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/loader.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>John Ondwari Obiko | Designer</title>
+  <meta name="description" content="Award-winning branding and web designer based in Nairobi">
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600&family=Satoshi:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-    <!-- Loading Animation -->
-    <div class="loader">
-        <div class="loader__circle"></div>
-        <div class="loader__name">
-            <span class="letter">J</span>
-            <span class="letter">O</span>
-            <span class="letter">H</span>
-            <span class="letter">N</span>
-            <span class="letter">O</span>
-        </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar__logo">J<span>O</span></div>
+    <div class="navbar__links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </div>
+    <div class="navbar__menu" id="mobile-menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
 
-    <!-- Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <!-- Navigation -->
-    <nav class="navbar">
-  <div class="navbar__logo">J<span>O</span></div>
-  <div class="navbar__links">
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu__links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
   </div>
-  <div class="navbar__menu" id="mobile-menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</nav>
 
-<!-- Add after the nav (for mobile menu) -->
-<div class="mobile-menu" id="mobile-menu">
-  <div class="mobile-menu__links">
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-</div>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="hero__title">
+      Design<br/>With Purpose
+    </h1>
+    <p class="hero__subtitle">John Ondwari Obiko</p>
+    <p class="hero__location">Branding & Web Designer — Nairobi, Kenya</p>
+    <div class="hero__cta">
+      <a href="#work" class="cta-button">
+        <span>Explore Work</span>
+        <div class="arrow"><i class="fas fa-arrow-right"></i></div>
+      </a>
+    </div>
+    <div class="hero__social">
+      <a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a>
+      <a href="#" title="Behance"><i class="fab fa-behance"></i></a>
+      <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </section>
 
+  <!-- Work Section -->
+  <section class="section" id="work">
+    <h2 class="hero__title">Selected Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="https://source.unsplash.com/800x600/?branding" alt="Brand Identity" />
+        <h3>XYZ Brand Identity</h3>
+        <p>Visual Identity / Strategy</p>
+      </div>
+      <div class="project-card">
+        <img src="https://source.unsplash.com/800x600/?web-design" alt="Web Platform" />
+        <h3>Commerce Redesign</h3>
+        <p>E-commerce / UX</p>
+      </div>
+      <div class="project-card">
+        <img src="https://source.unsplash.com/800x600/?mobile-app,ui" alt="Mobile App" />
+        <h3>Mobile App Experience</h3>
+        <p>UX / Interface Design</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero__content">
-            <h1 class="hero__title">
-                <span class="line"><span>Design</span></span>
-                <span class="line"><span>with</span></span>
-                <span class="line"><span>Purpose</span></span>
-            </h1>
-            <div class="hero__meta">
-                <p class="hero__subtitle">John Ondwari Obiko</p>
-                <p class="hero__location">Branding & Web Designer — Nairobi, Kenya</p>
-            </div>
-            <div class="hero__cta">
-                <a href="#work" class="cta-button">
-                    <span>Explore Work</span>
-                    <div class="arrow">
-                        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM17.5303 6.53033C17.8232 6.23744 17.8232 5.76256 17.5303 5.46967L12.7574 0.696699C12.4645 0.403806 11.9896 0.403806 11.6967 0.696699C11.4038 0.989593 11.4038 1.46447 11.6967 1.75736L15.9393 6L11.6967 10.2426C11.4038 10.5355 11.4038 11.0104 11.6967 11.3033C11.9896 11.5962 12.4645 11.5962 12.7574 11.3033L17.5303 6.53033ZM1 6.75L17 6.75L17 5.25L1 5.25L1 6.75Z" fill="currentColor"/>
-                        </svg>
-                    </div>
-                </a>
-                <div class="hero__social">
-                    <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
-                    <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="hero__image">
-            <div class="image-wrapper">
-                <div class="image-inner"></div>
-            </div>
-        </div>
-        <div class="hero__scroll">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
-        </div>
-    </section>
+  <!-- About Section -->
+  <section class="section" id="about">
+    <h2 class="hero__title">About Me</h2>
+    <p>I’m a Nairobi-based designer with a passion for elegant, functional digital experiences. Over the last 7+ years, I’ve partnered with startups and brands to create bold, strategic identities and digital platforms.</p>
+    <p>My focus is on clean, user-centered design that communicates powerfully and performs beautifully.</p>
+  </section>
 
-    <!-- Work Section -->
-    <section id="work" class="work">
-        <div class="section-header">
-            <h2 class="section-title">Selected <span>Projects</span></h2>
-            <p class="section-subtitle">Case studies of my most impactful work</p>
-        </div>
-        <div class="project-grid">
-            <a href="project-xyz.html" class="project-card">
-                <div class="project-card__image">
-                    <div class="image-wrapper">
-                        <img src="assets/images/project1.jpg" alt="XYZ Brand Identity" loading="lazy">
-                    </div>
-                </div>
-                <div class="project-card__content">
-                    <div class="project-card__meta">
-                        <h3 class="project-card__title">XYZ Brand Identity</h3>
-                        <p class="project-card__category">Branding / Visual Identity</p>
-                    </div>
-                    <div class="project-card__cta">
-                        <span>View Project</span>
-                        <div class="arrow">
-                            <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM17.5303 6.53033C17.8232 6.23744 17.8232 5.76256 17.5303 5.46967L12.7574 0.696699C12.4645 0.403806 11.9896 0.403806 11.6967 0.696699C11.4038 0.989593 11.4038 1.46447 11.6967 1.75736L15.9393 6L11.6967 10.2426C11.4038 10.5355 11.4038 11.0104 11.6967 11.3033C11.9896 11.5962 12.4645 11.5962 12.7574 11.3033L17.5303 6.53033ZM1 6.75L17 6.75L17 5.25L1 5.25L1 6.75Z" fill="currentColor"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="project-ecommerce.html" class="project-card">
-                <div class="project-card__image">
-                    <div class="image-wrapper">
-                        <img src="assets/images/project2.jpg" alt="E-Commerce Website" loading="lazy">
-                    </div>
-                </div>
-                <div class="project-card__content">
-                    <div class="project-card__meta">
-                        <h3 class="project-card__title">E-Commerce Platform</h3>
-                        <p class="project-card__category">Web Design / UI/UX</p>
-                    </div>
-                    <div class="project-card__cta">
-                        <span>View Project</span>
-                        <div class="arrow">
-                            <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM17.5303 6.53033C17.8232 6.23744 17.8232 5.76256 17.5303 5.46967L12.7574 0.696699C12.4645 0.403806 11.9896 0.403806 11.6967 0.696699C11.4038 0.989593 11.4038 1.46447 11.6967 1.75736L15.9393 6L11.6967 10.2426C11.4038 10.5355 11.4038 11.0104 11.6967 11.3033C11.9896 11.5962 12.4645 11.5962 12.7574 11.3033L17.5303 6.53033ZM1 6.75L17 6.75L17 5.25L1 5.25L1 6.75Z" fill="currentColor"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="project-app.html" class="project-card">
-                <div class="project-card__image">
-                    <div class="image-wrapper">
-                        <img src="assets/images/project3.jpg" alt="Mobile Application" loading="lazy">
-                    </div>
-                </div>
-                <div class="project-card__content">
-                    <div class="project-card__meta">
-                        <h3 class="project-card__title">Mobile Application</h3>
-                        <p class="project-card__category">Product Design / UX</p>
-                    </div>
-                    <div class="project-card__cta">
-                        <span>View Project</span>
-                        <div class="arrow">
-                            <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM17.5303 6.53033C17.8232 6.23744 17.8232 5.76256 17.5303 5.46967L12.7574 0.696699C12.4645 0.403806 11.9896 0.403806 11.6967 0.696699C11.4038 0.989593 11.4038 1.46447 11.6967 1.75736L15.9393 6L11.6967 10.2426C11.4038 10.5355 11.4038 11.0104 11.6967 11.3033C11.9896 11.5962 12.4645 11.5962 12.7574 11.3033L17.5303 6.53033ZM1 6.75L17 6.75L17 5.25L1 5.25L1 6.75Z" fill="currentColor"/>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="work__footer">
-            <a href="#" class="cta-button cta-button--outline">
-                <span>View All Projects</span>
-                <div class="arrow">
-                    <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM17.5303 6.53033C17.8232 6.23744 17.8232 5.76256 17.5303 5.46967L12.7574 0.696699C12.4645 0.403806 11.9896 0.403806 11.6967 0.696699C11.4038 0.989593 11.4038 1.46447 11.6967 1.75736L15.9393 6L11.6967 10.2426C11.4038 10.5355 11.4038 11.0104 11.6967 11.3033C11.9896 11.5962 12.4645 11.5962 12.7574 11.3033L17.5303 6.53033ZM1 6.75L17 6.75L17 5.25L1 5.25L1 6.75Z" fill="currentColor"/>
-                    </svg>
-                </div>
-            </a>
-        </div>
-    </section>
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <h2 class="hero__title">Let’s Connect</h2>
+    <p>Have a project or idea? Reach out and let’s bring it to life.</p>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button class="cta-button" type="submit">
+        <span>Send Message</span>
+        <div class="arrow"><i class="fas fa-paper-plane"></i></div>
+      </button>
+    </form>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about__content">
-            <div class="section-header">
-                <h2 class="section-title">About <span>Me</span></h2>
-                <p class="section-subtitle">Designer with a strategic approach</p>
-            </div>
-            <div class="about__text">
-                <p>I'm John Ondwari Obiko, a Nairobi-based designer specializing in brand identity and digital experiences. With over 7 years in the industry, I bridge the gap between aesthetics and functionality.</p>
-                <p>My approach combines strategic thinking with meticulous craftsmanship, delivering solutions that are not only visually striking but also deeply rooted in business objectives and user needs.</p>
-            </div>
-            <div class="about__skills">
-                <div class="skill">
-                    <h4>Brand Identity</h4>
-                    <div class="skill__progress">
-                        <div class="skill__progress-bar" data-level="95%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <h4>UI/UX Design</h4>
-                    <div class="skill__progress">
-                        <div class="skill__progress-bar" data-level="90%"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <h4>Web Design</h4>
-                    <div class="skill__progress">
-                        <div class="skill__progress-bar" data-level="85%"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="about__image">
-            <div class="image-wrapper">
-                <div class="image-inner"></div>
-            </div>
-        </div>
-    </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__logo">J<span>O</span></div>
+    <div class="footer__links">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+    </div>
+    <p>&copy; 2025 John Ondwari Obiko. All rights reserved.</p>
+  </footer>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="contact__content">
-            <div class="section-header">
-                <h2 class="section-title">Let's <span>Connect</span></h2>
-                <p class="section-subtitle">Have a project in mind or want to collaborate?</p>
-            </div>
-            <form class="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" required>
-                    <label for="name">Your Name</label>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" required>
-                    <label for="email">Email Address</label>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" rows="3" required></textarea>
-                    <label for="message">Your Message</label>
-                </div>
-                <button type="submit" class="cta-button">
-                    <span>Send Message</span>
-                    <div class="arrow">
-                        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75L1 5.25ZM17.5303 6.53033C17.8232 6.23744 17.8232 5.76256 17.5303 5.46967L12.7574 0.696699C12.4645 0.403806 11.9896 0.403806 11.6967 0.696699C11.4038 0.989593 11.4038 1.46447 11.6967 1.75736L15.9393 6L11.6967 10.2426C11.4038 10.5355 11.4038 11.0104 11.6967 11.3033C11.9896 11.5962 12.4645 11.5962 12.7574 11.3033L17.5303 6.53033ZM1 6.75L17 6.75L17 5.25L1 5.25L1 6.75Z" fill="currentColor"/>
-                        </svg>
-                    </div>
-                </button>
-            </form>
-        </div>
-        <div class="contact__info">
-            <div class="info-card">
-                <h3>Email</h3>
-                <a href="mailto:hello@johnobiko.com">hello@johnobiko.com</a>
-            </div>
-            <div class="info-card">
-                <h3>Social</h3>
-                <div class="social-links">
-                    <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
-                    <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="info-card">
-                <h3>Location</h3>
-                <p>Nairobi, Kenya</p>
-            </div>
-        </div>
-    </section>
+  <!-- JavaScript -->
+  <script>
+    const toggle = document.getElementById('mobile-menu-toggle');
+    const menu = document.getElementById('mobile-menu');
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer__content">
-            <div class="footer__logo">J<span>O</span></div>
-            <p class="footer__copyright">© 2023 John Ondwari Obiko. All rights reserved.</p>
-            <div class="footer__links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-            </div>
-        </div>
-    </footer>
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+      menu.classList.toggle('active');
+      document.body.classList.toggle('no-scroll');
+    });
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/Draggable.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/loader.js"></script>
+    document.querySelectorAll('.mobile-menu__links a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        menu.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+      });
+    });
+  </script>
 </body>
 </html>
