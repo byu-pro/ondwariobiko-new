@@ -392,3 +392,15 @@ a {
     margin-top: 1rem;
   }
 }
+.project-image {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.project-image img {
+  transition: transform 0.4s ease;
+}
+
+.project:hover .project-image img {
+  transform: scale(1.05);
+}
