@@ -613,6 +613,8 @@ img {
     -webkit-backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
     align-self: flex-start;
@@ -1316,4 +1318,75 @@ img {
 
 .navbar__links {
     gap: var(--space-md);
+}
+/* Fix for mobile menu toggle */
+.navbar__menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.navbar__menu span {
+  width: 25px;
+  height: 2px;
+  background: var(--white);
+  transition: all var(--transition);
+}
+
+.navbar__menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar__menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar__menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100%;
+  background: var(--black);
+  padding: var(--space-xl) var(--space-lg);
+  transition: right 0.4s ease;
+  z-index: 100;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.mobile-menu__links a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+/* Show menu icon on small screens */
+@media (max-width: 768px) {
+  .navbar__menu {
+    display: flex;
+  }
+
+  .navbar__links {
+    display: none;
+  }
+}
+.no-scroll {
+  overflow: hidden;
 }

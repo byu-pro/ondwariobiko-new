@@ -691,3 +691,25 @@ window.addEventListener('resize', debounce(() => {
 
 // Initialize responsive adjustments on load
 handleResponsiveChanges();
+
+function initMobileMenu() {
+  const toggle = document.getElementById('mobile-menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  if (!toggle || !menu) return;
+
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    menu.classList.toggle('active');
+    document.body.classList.toggle('no-scroll');
+  });
+
+  // Optional: close menu when a link is clicked
+  document.querySelectorAll('.mobile-menu__links a').forEach(link => {
+    link.addEventListener('click', () => {
+      toggle.classList.remove('active');
+      menu.classList.remove('active');
+      document.body.classList.remove('no-scroll');
+    });
+  });
+}
