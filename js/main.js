@@ -3,9 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initThemeToggle();
   initSplashScreen();
+  initCursor();
+  initStickyHeader();
 });
 
-// GSAP animations for scroll effects
+// GSAP animations
 function initScrollAnimations() {
   if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
 
@@ -97,13 +99,12 @@ function initMobileMenu() {
   });
 }
 
-// Theme (Dark/Light mode) toggle
+// Theme toggle
 function initThemeToggle() {
   const toggleBtn = document.getElementById('theme-toggle');
   const icon = toggleBtn.querySelector('i');
   const storedTheme = localStorage.getItem('theme');
 
-  // Apply saved theme
   if (storedTheme === 'light') {
     document.documentElement.setAttribute('data-theme', 'light');
     icon.classList.remove('fa-moon');
@@ -128,11 +129,53 @@ function initThemeToggle() {
   });
 }
 
-// Splash screen logic
+// Splash screen
 function initSplashScreen() {
   window.addEventListener('load', () => {
     setTimeout(() => {
       document.body.classList.add('loaded');
-    }, 1600); // Matches splash animation timing
+    }, 1600);
   });
+}
+
+// Sticky header on scroll
+function initStickyHeader() {
+  const header = document.querySelector('.site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('sticky');
+    } else {
+      header.classList.remove('sticky');
+    }
+  });
+}
+
+// Custom cursor
+function initCursor() {
+  const cursorDot = document.querySelector('.cursor-dot');
+  const cursorOutline = document.querySelector('.cursor-outline');
+
+  let mouseX = 0, mouseY = 0;
+  let outlineX = 0, outlineY = 0;
+  const delay = 0.15;
+
+  function animateCursor() {
+    outlineX += (mouseX - outlineX) * delay;
+    outlineY += (mouseY - outlineY) * delay;
+
+    cursorDot.style.left = `${mouseX}px`;
+    cursorDot.style.top = `${mouseY}px`;
+
+    cursorOutline.style.left = `${outlineX}px`;
+    cursorOutline.style.top = `${outlineY}px`;
+
+    requestAnimationFrame(animateCursor);
+  }
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+
+  animateCursor();
 }
