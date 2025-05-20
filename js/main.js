@@ -80,14 +80,17 @@ function initMobileMenu() {
 
   if (!hamburger || !navLinks) return;
 
+  // Toggle menu visibility and icon
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active'); // switch between hamburger and X
   });
 
-  // Close menu on link click (mobile UX)
+  // Close mobile nav on link click
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       navLinks.classList.remove('active');
+      hamburger.classList.remove('active');
     });
   });
 }
