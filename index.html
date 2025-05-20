@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>John Ondwari Obiko | Designer</title>
-  <meta name="description" content="Award-winning branding and web designer based in Nairobi">
+  <meta name="description" content="Award-winning branding and web designer based in Nairobi.">
   <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600&family=Satoshi:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="/css/style.css" />
@@ -37,9 +37,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <h1 class="hero__title">
-      Design<br/>With Purpose
-    </h1>
+    <h1 class="hero__title">Design<br/>With Purpose</h1>
     <p class="hero__subtitle">John Ondwari Obiko</p>
     <p class="hero__location">Branding & Web Designer — Nairobi, Kenya</p>
     <div class="hero__cta">
@@ -109,24 +107,9 @@
     <p>&copy; 2025 John Ondwari Obiko. All rights reserved.</p>
   </footer>
 
-  <!-- JavaScript -->
-  <script>
-    const toggle = document.getElementById('mobile-menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-
-    toggle.addEventListener('click', () => {
-      toggle.classList.toggle('active');
-      menu.classList.toggle('active');
-      document.body.classList.toggle('no-scroll');
-    });
-
-    document.querySelectorAll('.mobile-menu__links a').forEach(link => {
-      link.addEventListener('click', () => {
-        toggle.classList.remove('active');
-        menu.classList.remove('active');
-        document.body.classList.remove('no-scroll');
-      });
-    });
-  </script>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>
