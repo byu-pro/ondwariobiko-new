@@ -98,7 +98,21 @@ a {
 }
 
 .hamburger.active i::before {
-  content: "\f00d"; /* FontAwesome X icon */
+  content: "\\f00d"; /* FontAwesome X icon */
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--accent);
+  transition: color var(--transition);
+}
+
+#theme-toggle:hover {
+  color: var(--accent-hover);
 }
 
 /* Hero */
@@ -177,6 +191,20 @@ a {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: var(--radius);
+}
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  overflow: hidden;
+  border-radius: var(--radius);
 }
 
 .project-image img {
@@ -184,6 +212,11 @@ a {
   height: auto;
   object-fit: cover;
   border-radius: var(--radius);
+  transition: transform 0.4s ease;
+}
+
+.project:hover .project-image img {
+  transform: scale(1.05);
 }
 
 .project-info h3 {
@@ -252,9 +285,7 @@ a {
   color: var(--accent);
 }
 
-/* ================================
-   Brand Logos Section (Updated)
-   ================================ */
+/* Brand Logos Section */
 .brands-section {
   padding: 5rem 0;
   background: #121212;
@@ -302,9 +333,7 @@ a {
   }
 }
 
-/* ================================
-   Responsive Adjustments
-   ================================ */
+/* Responsive Adjustments */
 @media (max-width: 767px) {
   .nav-links {
     position: fixed;
@@ -382,25 +411,80 @@ a {
 @media (min-width: 768px) {
   .projects-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
   }
 
   .project {
-    display: block;
+    flex-direction: column;
+    text-align: left;
   }
 
   .project-info h3 {
     margin-top: 1rem;
   }
 }
-.project-image {
-  overflow: hidden;
-  border-radius: var(--radius);
+
+/* Light Theme Overrides */
+html[data-theme='light'] {
+  --bg: #ffffff;
+  --text: #111111;
+  --text-muted: #666666;
+  --accent: #6a00ff;
+  --accent-hover: #935eff;
 }
 
-.project-image img {
-  transition: transform 0.4s ease;
+html[data-theme='light'] .site-header {
+  background: rgba(255, 255, 255, 0.85);
 }
 
-.project:hover .project-image img {
-  transform: scale(1.05);
+html[data-theme='light'] .site-footer {
+  background: #f2f2f2;
+}
+
+html[data-theme='light'] .brands-section {
+  background: #f5f5f5;
+}
+
+/* Splash Screen Animation */
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.splash-logo {
+  font-family: var(--font-title);
+  font-size: 3rem;
+  color: var(--accent);
+  opacity: 0;
+  transform: scale(0.8);
+  animation: splashFade 1.5s ease-out forwards;
+}
+
+@keyframes splashFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+body.loaded #splash-screen {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
 }
