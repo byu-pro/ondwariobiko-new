@@ -1,47 +1,86 @@
 /* Variables */
 :root {
-    --dark-bg: #0A0A0A;
-    --light-text: #F5F5F5;
-    --accent: #FF4D4D;
-    --gradient: linear-gradient(45deg, #FF4D4D, #F9CB28);
+    --black: #000000;
+    --white: #FFFFFF;
+    --purple: #7B2CBF;
+    --dark-purple: #3A0CA3;
+    --light-purple: #E0AAFF;
 }
 
-/* Reset & Base Styles */
+/* Typography */
 body {
     font-family: 'Satoshi', sans-serif;
-    background: var(--dark-bg);
-    color: var(--light-text);
+    background: var(--black);
+    color: var(--white);
     margin: 0;
-    line-height: 1.6;
 }
 
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 2rem;
-}
-
-h1 {
+h1, h2, h3 {
     font-family: 'Clash Display', sans-serif;
-    font-size: 4rem;
-    margin: 0;
-    background: var(--gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
 }
 
+.hero h1 {
+    font-size: 5rem;
+    margin: 0;
+    color: var(--white);
+    text-shadow: 0 0 10px var(--light-purple);
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--dark-purple);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--purple);
+}
+
+/* CTA Button */
 .cta-button {
-    background: var(--accent);
-    color: white;
+    background: var(--purple);
+    color: var(--white);
     padding: 12px 24px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 700;
     margin-top: 2rem;
     display: inline-block;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: var(--dark-purple);
+}
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.hero {
+    position: relative;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(123, 44, 191, 0.2), transparent 70%);
+    pointer-events: none;
 }

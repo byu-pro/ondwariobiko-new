@@ -18,3 +18,13 @@ document.querySelectorAll(".project-card").forEach(card => {
         gsap.to(card, { scale: 1, duration: 0.3 });
     });
 });
+// GSAP Animations
+gsap.from(".hero h1", { 
+    opacity: 0, y: -50, duration: 1 
+});
+gsap.from(".project-card", { 
+    opacity: 0, y: 50, stagger: 0.2, scrollTrigger: {
+        trigger: ".work",
+        start: "top 80%"
+    }
+});
