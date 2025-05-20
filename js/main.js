@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
+  initMobileMenu();
 });
 
 function initScrollAnimations() {
@@ -70,5 +71,23 @@ function initScrollAnimations() {
     y: 30,
     duration: 1,
     ease: 'power2.out'
+  });
+}
+
+function initMobileMenu() {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  if (!hamburger || !navLinks) return;
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // Close menu on link click (mobile UX)
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
   });
 }
