@@ -1137,3 +1137,183 @@ img {
         gap: var(--space-md);
     }
 }
+/* Update Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 var(--space-md);
+}
+
+.hero__content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-xl) 0;
+}
+
+.hero__image {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 400px;
+}
+
+/* Improve Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-card__image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* About Section Improvements */
+.about {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-md);
+}
+
+.about__content {
+    width: 100%;
+    order: 2;
+}
+
+.about__image {
+    width: 100%;
+    height: 400px;
+    margin-bottom: var(--space-lg);
+    order: 1;
+}
+
+/* Contact Section Adjustments */
+.contact {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-md);
+}
+
+.contact__content {
+    width: 100%;
+    margin-bottom: var(--space-xl);
+}
+
+.contact__info {
+    width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .hero__content {
+        width: 60%;
+        padding-right: var(--space-xl);
+    }
+    
+    .hero__image {
+        width: 40%;
+        height: 500px;
+    }
+    
+    .about {
+        flex-direction: row;
+        gap: var(--space-xl);
+    }
+    
+    .about__content {
+        width: 50%;
+        order: 1;
+    }
+    
+    .about__image {
+        width: 45%;
+        order: 2;
+    }
+    
+    .contact {
+        flex-direction: row;
+        gap: var(--space-xl);
+    }
+    
+    .contact__content {
+        width: 60%;
+        margin-bottom: 0;
+    }
+    
+    .contact__info {
+        width: 35%;
+    }
+}
+
+/* General Layout Improvements */
+.section {
+    padding: var(--space-xl) var(--space-md);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+/* Typography Adjustments */
+.hero__title {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-xs);
+}
+
+.hero__location {
+    font-size: 1rem;
+}
+
+/* Button Alignment */
+.hero__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    align-items: center;
+    margin-top: var(--space-lg);
+}
+
+/* Navigation Fixes */
+.navbar {
+    padding: var(--space-sm) var(--space-md);
+}
+
+.navbar__links {
+    gap: var(--space-md);
+}
