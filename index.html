@@ -2,114 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>John Ondwari Obiko | Designer</title>
-  <meta name="description" content="Award-winning branding and web designer based in Nairobi.">
-  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600&family=Satoshi:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Ondwari Obiko — Creative Designer</title>
+  <meta name="description" content="Portfolio of John Ondwari Obiko — Creative Digital Designer based in Nairobi" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@600&family=Satoshi:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="navbar__logo">J<span>O</span></div>
-    <div class="navbar__links">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">JO</div>
+      <nav class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <div class="navbar__menu" id="mobile-menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobile-menu">
-    <div class="mobile-menu__links">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </div>
+  </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <h1 class="hero__title">Design<br/>With Purpose</h1>
-    <p class="hero__subtitle">John Ondwari Obiko</p>
-    <p class="hero__location">Branding & Web Designer — Nairobi, Kenya</p>
-    <div class="hero__cta">
-      <a href="#work" class="cta-button">
-        <span>Explore Work</span>
-        <div class="arrow"><i class="fas fa-arrow-right"></i></div>
-      </a>
-    </div>
-    <div class="hero__social">
-      <a href="#" title="Dribbble"><i class="fab fa-dribbble"></i></a>
-      <a href="#" title="Behance"><i class="fab fa-behance"></i></a>
-      <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  <section class="hero full-screen">
+    <div class="container">
+      <h1 class="hero-heading">Digital Design that <br /><span class="highlight">Transforms Brands</span></h1>
+      <p class="hero-subtitle">John Ondwari Obiko — Creative Director & Digital Designer</p>
+      <div class="hero-buttons">
+        <a href="#work" class="btn btn-primary">View Work</a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+      </div>
     </div>
   </section>
 
-  <!-- Work Section -->
-  <section class="section" id="work">
-    <h2 class="hero__title">Selected Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="https://source.unsplash.com/800x600/?branding" alt="Brand Identity" />
-        <h3>XYZ Brand Identity</h3>
-        <p>Visual Identity / Strategy</p>
+  <!-- Projects Section -->
+  <section id="work" class="projects-section">
+    <div class="container">
+      <h2 class="section-title">Selected Projects</h2>
+
+      <div class="project">
+        <div class="project-image">
+          <img src="https://source.unsplash.com/1600x900/?branding,design" alt="Branding Project" />
+        </div>
+        <div class="project-info">
+          <h3>Studio Rebrand</h3>
+          <p>Identity Design · Brand Strategy</p>
+        </div>
       </div>
-      <div class="project-card">
-        <img src="https://source.unsplash.com/800x600/?web-design" alt="Web Platform" />
-        <h3>Commerce Redesign</h3>
-        <p>E-commerce / UX</p>
+
+      <div class="project">
+        <div class="project-image">
+          <img src="https://source.unsplash.com/1600x900/?web-design,ui" alt="Web Design Project" />
+        </div>
+        <div class="project-info">
+          <h3>Commerce Redefined</h3>
+          <p>Web Design · E-Commerce</p>
+        </div>
       </div>
-      <div class="project-card">
-        <img src="https://source.unsplash.com/800x600/?mobile-app,ui" alt="Mobile App" />
-        <h3>Mobile App Experience</h3>
-        <p>UX / Interface Design</p>
-      </div>
+
     </div>
   </section>
 
   <!-- About Section -->
-  <section class="section" id="about">
-    <h2 class="hero__title">About Me</h2>
-    <p>I’m a Nairobi-based designer with a passion for elegant, functional digital experiences. Over the last 7+ years, I’ve partnered with startups and brands to create bold, strategic identities and digital platforms.</p>
-    <p>My focus is on clean, user-centered design that communicates powerfully and performs beautifully.</p>
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p>I’m a Nairobi-based designer working globally with forward-thinking brands. I craft meaningful digital experiences through strategic design and creative execution. I believe in simplicity, clarity, and beauty — all while solving real problems.</p>
+    </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="section" id="contact">
-    <h2 class="hero__title">Let’s Connect</h2>
-    <p>Have a project or idea? Reach out and let’s bring it to life.</p>
-    <form class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button class="cta-button" type="submit">
-        <span>Send Message</span>
-        <div class="arrow"><i class="fas fa-paper-plane"></i></div>
-      </button>
-    </form>
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Let's Work Together</h2>
+      <p>If you’d like to chat about a project or just connect, feel free to drop a line.</p>
+      <a href="mailto:hello@johnobiko.com" class="btn btn-primary">Email Me</a>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer__logo">J<span>O</span></div>
-    <div class="footer__links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Use</a>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-logo">JO</div>
+      <div class="footer-links">
+        <a href="#">LinkedIn</a>
+        <a href="#">Dribbble</a>
+        <a href="#">Behance</a>
+      </div>
+      <p>&copy; 2025 John Ondwari Obiko. All rights reserved.</p>
     </div>
-    <p>&copy; 2025 John Ondwari Obiko. All rights reserved.</p>
   </footer>
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="/js/main.js"></script>
+
 </body>
 </html>
