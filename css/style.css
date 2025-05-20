@@ -1,0 +1,47 @@
+/* Variables */
+:root {
+    --dark-bg: #0A0A0A;
+    --light-text: #F5F5F5;
+    --accent: #FF4D4D;
+    --gradient: linear-gradient(45deg, #FF4D4D, #F9CB28);
+}
+
+/* Reset & Base Styles */
+body {
+    font-family: 'Satoshi', sans-serif;
+    background: var(--dark-bg);
+    color: var(--light-text);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+h1 {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 4rem;
+    margin: 0;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.cta-button {
+    background: var(--accent);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 2rem;
+    display: inline-block;
+}
